@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Large Circular Black Background -->
+    <item android:width="64dp" android:height="64dp">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/black" />
+        </shape>
+    </item>
+
+    <!-- Small Rotated White Flight Icon -->
+    <item
+        android:width="50dp"
+        android:height="50dp"
+        android:gravity="center">
+        <rotate
+            android:fromDegrees="5"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <bitmap
+                android:src="@drawable/plane"
+                android:tint="@android:color/white" />
+        </rotate>
+    </item>
+
+</layer-list>

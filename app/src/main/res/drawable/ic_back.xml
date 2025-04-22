@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow for pre-Lollipop devices -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#33000000"/>
+            <corners android:radius="5dp"/>
+            <padding
+                android:bottom="1dp"
+                android:left="1dp"
+                android:right="1dp"
+                android:top="1dp"/>
+        </shape>
+    </item>
+
+    <!-- White rounded rectangle background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+            <corners android:radius="5dp"/>
+        </shape>
+    </item>
+
+    <!-- Back arrow icon -->
+    <item
+        android:width="24dp"
+        android:height="24dp"
+        android:gravity="center">
+        <vector android:viewportWidth="24"
+            android:viewportHeight="24"
+            android:width="24dp"
+            android:height="24dp">
+            <path
+                android:fillColor="@android:color/black"
+                android:pathData="M20,11H7.83l5.59,-5.59L12,4l-8,8 8,8 1.41,-1.41L7.83,13H20v-2z"/>
+        </vector>
+    </item>
+</layer-list>

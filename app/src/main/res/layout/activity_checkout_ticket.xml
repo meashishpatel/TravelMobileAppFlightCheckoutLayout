@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CheckoutTicketActivity">
+
+    <!-- Custom Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <!-- Custom Centered Title -->
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Checkout Ticket"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/yourTicketTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Your Ticket"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ticketCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/yourTicketTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Luggage and Offers Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free luggage 10Kg"
+                        app:chipIcon="@drawable/luggage"
+                        app:chipBackgroundColor="@color/blue"
+                        app:chipStrokeColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Christimas Disc"
+                        app:chipIcon="@drawable/discount"
+                        app:chipBackgroundColor="@color/blue"
+                        app:chipStrokeColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free Cabin 8Kg"
+                        app:chipIcon="@drawable/container"
+                        app:chipBackgroundColor="@color/blue"
+                        app:chipStrokeColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free Reschedule"
+                        app:chipIcon="@drawable/rescheduling"
+                        app:chipBackgroundColor="@color/blue"
+                        app:chipStrokeColor="@color/darkBlue"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Route Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jakarta"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray1"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CGK"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:15 PM"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray1"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QA-1389"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/gray1"/>
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="DPS"
+                        android:src="@drawable/ic_flight"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2H 45M"
+                        android:textSize="10sp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/gray1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bali"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray1"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DPS"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="09:15 PM"
+                        android:textSize="16sp"
+                        android:textColor="@color/gray1"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!-- Airline and Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/qatar_airways"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$110"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:paddingEnd="40dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/yourPersonalInformationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ticketCard"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Your Personal Information"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"/>
+
+
+    <TextView
+        android:id="@+id/fullNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/yourPersonalInformationTV"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Your Full Name"
+        android:layout_marginTop="17dp"
+        android:textSize="16dp"
+        android:textColor="@color/grey"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/NameEt"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext_rounded"
+        android:hint="Your Full Name"
+        android:text="Ashish Patel"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:inputType="textPersonName"
+        android:cursorVisible="false"
+        android:singleLine="true"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/fullNameTv"/>
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:textSize="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/NameEt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Email"
+        android:textColor="@color/grey"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext_rounded"
+        android:hint="Your Full Name"
+        android:text="ashishpatel3009@gmail.com"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:inputType="textPersonName"
+        android:cursorVisible="false"
+        android:singleLine="true"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintTop_toBottomOf="@id/emailTv"/>
+    <TextView
+        android:id="@+id/totalPassengerTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/emailEt"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Total Passenger"
+        android:layout_marginTop="17dp"
+        android:textSize="16dp"
+        android:textColor="@color/grey"
+        android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/totalPassengerInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/bg_edittext_rounded"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/totalPassengerTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/totalPassengerET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="1 Passenger"
+            android:paddingStart="8dp"
+            android:background="@android:color/transparent"
+            android:maxLength="10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="@color/darkBlue"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/totalPassengerInputLayout"
+        android:padding="16dp">
+
+        <!-- Ticket Price Label -->
+        <TextView
+            android:id="@+id/ticketPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket Price"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Price and Passenger Info -->
+        <TextView
+            android:id="@+id/priceTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$110"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticketPriceLabel"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/numberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1 Adult Passenger)"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintStart_toEndOf="@id/priceTV"
+            app:layout_constraintBottom_toBottomOf="@id/priceTV"
+            android:layout_marginStart="6dp"/>
+
+        <!-- Checkout Button -->
+        <FrameLayout
+            android:id="@+id/checkoutBtn"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/black_btn_bg"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/priceTV">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Checkout Ticket"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
