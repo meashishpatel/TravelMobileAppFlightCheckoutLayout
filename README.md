@@ -19,9 +19,11 @@ This repository contains the layout for the **Flight Checkout** screen of a trav
 
 Here are some screenshots of the Flight Checkout layout:
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
+<div style="display: flex; justify-content: space-around;">
+  <img src="screenshots/screenshot1.png" width="300" />
+  <img src="screenshots/screenshot2.png" width="300" />
+  <img src="screenshots/screenshot3.png" width="300" />
+</div>
 
 ---
 
